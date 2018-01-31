@@ -102,7 +102,11 @@ def run_tesseract(input_filename,
     command += shlex.split(config)
 
     if extension != 'box':
-        command.append(extension)
+        if extension == 'tsv':
+            command += ['-c', 'tessedit_create_tsv=1']
+        elif extension == 'txt':
+            pass
+        # command.append(extension)
 
     proc = subprocess.Popen(command, stderr=subprocess.PIPE)
     status_code, error_string = proc.wait(), proc.stderr.read()

@@ -10,11 +10,11 @@ if os.path.exists(README_PATH):
 
 INSTALL_REQUIRES = ['Pillow']
 PACKAGE_NAME = 'pytesseract'
-PACKAGE_DIR = 'src'
+PACKAGE_DIR = 'pytesseract'
 
 setup(
     name=PACKAGE_NAME,
-    version='0.1.9',
+    version='1.1.9',
     author='Samuel Hoffstaetter',
     author_email='samuel@hoffstaetter.com',
     maintainer='Matthias Lee',
